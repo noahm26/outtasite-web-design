@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
+@import url(css-reset.css);
+
+/* Font Family */
+html,
+body {
+  font-family: "Mulish", sans-serif;
+  color: #333333;
+}
+
+@media only screen and (min-width: 1700px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+article {
+  max-width: 80%;
+  margin: 60px auto;
+}
+article p {
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+article a {
+  color: #6f2700;
+  text-decoration: underline;
+  font-weight: 600;
+}

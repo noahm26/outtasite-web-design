@@ -1,0 +1,39 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0 18px;
+  background-image: url(../../assets/images/chipped-bkg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+}
+#site-description {
+  color: #fff8dc;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-top: -12px;
+  text-align: center;
+  line-height: 1.5;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 800px) {
+  #site-description {
+    margin-top: -24px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #site-description {
+    font-size: 0.8em;
+    margin-top: -30px;
+  }
+}

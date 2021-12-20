@@ -1,0 +1,120 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fac415;
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  font-size: 0.9em;
+  font-weight: 600;
+  text-decoration: none;
+  color: #6f2700;
+  display: block;
+  padding: 12px 24px;
+}
+nav ul li a.active {
+  color: #fff;
+}
+.menu-container {
+  width: 80%;
+  position: relative;
+}
+button {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  nav,
+  nav ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  nav ul {
+    width: 100%;
+    margin-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    z-index: 50;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    /* top: -200px; */
+    /* opacity: 0; */
+    /* transform-origin: top center; */
+    /* box-shadow: 0 rgba(0, 0, 0, 0);
+    transition: all 0.3s ease-out; */
+  }
+  nav ul.show li:last-child {
+    /* top: 0; */
+    /* bottom: auto; */
+    /* opacity: 1; */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li a {
+    height: 48px;
+    border-top: 1px solid #ffe590;
+    width: 100%;
+    background-color: #fac415;
+  }
+  .menu-container {
+    width: 100%;
+  }
+  button {
+    display: block;
+    color: #6f2700;
+    text-transform: uppercase;
+    font-size: 1em;
+    line-height: 2;
+    font-weight: 600;
+    background-color: #fac415;
+    outline: none;
+    border: none;
+    width: 100%;
+    position: relative;
+    z-index: 80;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    padding-left: 27px;
+  }
+  button.pressed {
+    background-color: #ffe590;
+  }
+  .hamburger {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-36px);
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 15px;
+    height: 2px;
+    background-color: #6f2700;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+  .change .bar1 {
+    transform: rotate(-45deg) translate(-3px, 4px);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    transform: rotate(45deg) translate(-3px, -4px);
+  }
+}

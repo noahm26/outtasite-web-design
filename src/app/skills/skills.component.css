@@ -1,0 +1,58 @@
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 24px 72px 12px;
+}
+.skill {
+  width: 25%;
+  padding: 60px 12px 0;
+}
+.icon {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+}
+.icon img {
+  width: 50px;
+}
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #284473;
+}
+ul {
+  margin: 12px auto 0;
+}
+li {
+  background-image: url(../../assets/images/check.png);
+  background-repeat: no-repeat;
+  background-position: left 10%;
+  font-size: 1em;
+  line-height: 1.5;
+  padding-left: 24px;
+  padding-bottom: 12px;
+  list-style: none;
+}
+
+@media only screen and (max-width: 1700px) {
+  ul {
+    padding-left: 24px;
+    max-width: 300px;
+  }
+  li {
+    background-position: left 5%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .skill {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .skill {
+    width: 100%;
+  }
+}

@@ -1,0 +1,23 @@
+svg {
+  filter: drop-shadow(6px 3px 6px rgba(0, 0, 0, 0.7));
+}
+#frame {
+  display: none;
+}
+#front,
+#back {
+  stroke-width: 0;
+  fill: none;
+}
+
+@media only screen and (max-width: 800px) {
+  svg {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  svg {
+    width: 500px;
+  }
+}

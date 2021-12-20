@@ -1,0 +1,142 @@
+.recent-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 48px 24px 60px;
+  background-color: #2760ab;
+}
+h3 {
+  text-align: center;
+  font-size: 1.75em;
+  color: #fff;
+  margin-bottom: 9px;
+}
+h4 {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  color: #fff;
+}
+a.button-link {
+  display: flex;
+  font-size: 0.9em;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: rgb(40, 68, 115);
+  padding: 12px 42px;
+  margin: 30px auto 0;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+}
+a:hover {
+  text-decoration: underline;
+  color: rgb(230, 238, 252);
+  background-color: rgb(35, 58, 99);
+}
+.thumbnails {
+  display: flex;
+  padding-top: 24px;
+}
+.thumb {
+  width: 20%;
+  margin: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+  /* backface-visibility: hidden;
+  transform: translate3d(0, 0, 0); */
+}
+.thumb img {
+  z-index: 5;
+  transition: all 0.5s ease-out;
+}
+.thumb:hover img {
+  transform: scale(1.3);
+  filter: blur(2px) brightness(60%);
+}
+.thumb .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.thumb .title h4 {
+  font-size: 1.25em;
+  line-height: 1.2;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+.thumb .title {
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+}
+.thumb:hover .title {
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1100px) {
+  .thumb {
+    margin: 18px;
+  }
+  .thumb .title h4 {
+    font-size: 1.15em;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .thumb {
+    margin: 12px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .thumbnails {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .thumb {
+    width: 29.3333333%;
+    margin: 2%;
+  }
+  .thumb .title h4 {
+    font-size: 1.25em;
+  }
+  a.button-link {
+    margin-bottom: 12px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .thumb {
+    width: 50%;
+    margin: 24px 10%;
+  }
+  .thumb .title {
+    opacity: 1;
+  }
+  .thumb .title h4 {
+    font-size: 1.15em;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 48px;
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .thumb:hover .title {
+    transform: none;
+  }
+}
