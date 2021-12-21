@@ -1,0 +1,11 @@
+identifier: kbx9f670m76duf1f
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: outtasite
+homeFolder: /Users/noahm/Sites/OuttaSiteAngular/outtasite
+distFolder: dist/outtasite
+outDir: /Users/noahm/Sites/OuttaSiteAngular/outtasite/dist/static
+handle404: ''
+allowErrorCollect: false

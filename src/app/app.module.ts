@@ -21,6 +21,7 @@ import { RecentWorkComponent } from './recent-work/recent-work.component';
 import { ResponsiveComponent } from './responsive/responsive.component';
 import { CallToActionComponent } from './call-to-action/call-to-action.component';
 import { FooterComponent } from './footer/footer.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ScullyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
