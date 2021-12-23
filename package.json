@@ -26,6 +26,7 @@
     "@scullyio/ng-lib": "^2.0.0",
     "@scullyio/scully": "^2.0.0",
     "@scullyio/scully-plugin-puppeteer": "^2.0.0",
+    "@sendgrid/mail": "^7.6.0",
     "gsap": "npm:@gsap/shockingly@^3.8.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",

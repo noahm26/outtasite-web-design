@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { EmailService } from '../services/email.service';
 
 @Component({
   selector: 'app-contact',
@@ -22,7 +23,7 @@ export class ContactComponent implements OnInit {
     message: ['', [Validators.required]],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private emailService: EmailService) {}
 
   ngOnInit(): void {}
 
@@ -37,6 +38,7 @@ export class ContactComponent implements OnInit {
   onSubmit() {
     if (this.form.valid) {
       console.log(this.form.value);
+      this.emailService.sendEmail();
     }
   }
 }
