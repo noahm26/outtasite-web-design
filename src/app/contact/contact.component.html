@@ -1,5 +1,67 @@
 <div class="contact">
-  <h2>We can't wait to hear from you!</h2>
+  <h2 style="text-align: center">We can't wait to hear from you!</h2>
+  <div class="form-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="Name" formControlName="name" required />
+        <mat-error>Name is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email" required />
+        <mat-error *ngIf="email.errors?.required">Email is required</mat-error>
+        <mat-error *ngIf="email.errors?.email">Must be an email</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Phone" formControlName="phone" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select
+          formControlName="services"
+          placeholder="Services you are interested in"
+          multiple
+        >
+          <mat-option value="New Website">New Website</mat-option>
+          <mat-option value="Website Redesign">Website Redesign</mat-option>
+          <mat-option value="Blog Setup">Blog Setup</mat-option>
+          <mat-option value="Logo Design">Logo Design</mat-option>
+          <mat-option value="Graphic Design">Graphic Design</mat-option>
+          <mat-option value="Online Marketing">Online Marketing</mat-option>
+          <mat-option value="Print Marketing">Print Marketing</mat-option>
+          <mat-option value="Mobile App">Mobile App</mat-option>
+          <mat-option value="Ask a Question">Ask a Question</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select
+          formControlName="urgency"
+          placeholder="How urgent is this project?"
+        >
+          <mat-option value="Low">Low</mat-option>
+          <mat-option value="Medium">Medium</mat-option>
+          <mat-option value="High">High</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <textarea
+          matInput
+          formControlName="message"
+          placeholder="Project Description or Message"
+          cdkTextareaAutosize
+          [cdkAutosizeMinRows]="6"
+          [cdkAutosizeMaxRows]="12"
+          required
+        ></textarea>
+      </mat-form-field>
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        class="form-submit"
+      >
+        Send
+      </button>
+    </form>
+  </div>
   <div class="form-box">
     <form
       name="contact-form"

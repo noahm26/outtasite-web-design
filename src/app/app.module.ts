@@ -22,6 +22,11 @@ import { ResponsiveComponent } from './responsive/responsive.component';
 import { CallToActionComponent } from './call-to-action/call-to-action.component';
 import { FooterComponent } from './footer/footer.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -43,14 +48,19 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     RecentWorkComponent,
     ResponsiveComponent,
     CallToActionComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ScullyLibModule
+    ScullyLibModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

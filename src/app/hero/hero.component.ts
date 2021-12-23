@@ -51,7 +51,7 @@ export class HeroComponent implements OnInit {
         duration: 0.6,
         ease: 'back.out(0.6)',
         stagger: 0.08,
-        onComplete: () => split.revert(),
+        //onComplete: () => split.revert(),
       })
       .from(
         '.intro p',

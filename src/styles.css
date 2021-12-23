@@ -9,6 +9,21 @@ body {
   font-family: "Mulish", sans-serif;
   color: #333333;
 }
+.mat-form-field {
+  font-family: "Mulish", Roboto, "Helvetica Neue", sans-serif !important;
+}
+.mat-form-field-infix {
+  width: 100% !important;
+  min-width: 400px !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding-top: 3px;
+}
+button.form-submit {
+  min-width: 400px;
+  padding: 6px;
+  cursor: pointer;
+}
 
 @media only screen and (min-width: 1700px) {
   html {
