@@ -7,9 +7,7 @@ import { Injectable } from '@angular/core';
 export class EmailService {
   constructor(private http: HttpClient) {}
 
-  sendEmail() {
-    this.http.post('/.netlify/functions/sendgrid', {
-      message: 'My test message in Netlify Sendgrid setup',
-    });
+  sendEmail(data: any) {
+    this.http.post('/.netlify/functions/sendgrid', data);
   }
 }

@@ -38,7 +38,12 @@ export class ContactComponent implements OnInit {
   onSubmit() {
     if (this.form.valid) {
       console.log(this.form.value);
-      this.emailService.sendEmail();
+      const emailData = {
+        subject: 'Form Submission from OuttaSite Web Design',
+        to: this.form.value.email,
+        message: 'My test message in Netlify Sendgrid setup',
+      };
+      this.emailService.sendEmail(emailData);
     }
   }
 }
